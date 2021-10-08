@@ -1,12 +1,11 @@
 import React from "react";
-import Items from "../data_storage/items.js";
 
 function DisplayItems(props) {
-  console.log("This is: ", Items);
-  let allItems = Items.map((element, index) => {
+  console.log("This is: ", props.currentItem);
+  let allItems = props.currentItem.map((element, index) => {
     return (
       <li className={element.id} key={index}>
-        {element.name} - {element.cost}
+        {element.localized_name} - {element.cost}
         <img src={element.url_image} alt={element.id} />"
       </li>
     );
