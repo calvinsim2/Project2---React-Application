@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+
+.recommend-item {
+  display: flex;
+  align-items: space-evenly;
+  background: #f4f4f4;
+}

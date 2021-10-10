@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import React from "react";
 import DisplayItems from "./child_components/items.jsx";
 import Items from "./data_storage/items.js";
+import IndividualItem from "./child_components/individualitem.jsx";
 import Hero from "./child_components/hero.jsx";
+import HeroLore from "./data_storage/herolore.js";
 import IndividualHero from "./child_components/individualhero.jsx";
 import Home from "./child_components/Home.jsx";
 import { Route, Link, Switch } from "react-router-dom";
@@ -39,11 +41,18 @@ function App() {
           <Route exact path="/items">
             <DisplayItems currentItem={Items} />
           </Route>
+          <Route path="/items/:name/">
+            <IndividualItem currentItem={Items} />
+          </Route>
           <Route exact path="/hero">
             <Hero setCurrentHero={setCurrentHero} />
           </Route>
           <Route path="/hero/:heroname/">
-            <IndividualHero currentHero={currentHero} currentItem={Items} />
+            <IndividualHero
+              currentHero={currentHero}
+              currentItem={Items}
+              HeroLore={HeroLore}
+            />
           </Route>
         </Switch>
       </div>
