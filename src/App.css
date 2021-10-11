@@ -4,6 +4,24 @@
 
 .recommend-item {
   display: flex;
-  align-items: space-evenly;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
   background: #f4f4f4;
+}
+
+.itemlist {
+  display: block;
+  background: #444444;
+}
+
+.ind-list {
+  background: #f4f4f4;
+}
+
+.ind-item {
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
 }

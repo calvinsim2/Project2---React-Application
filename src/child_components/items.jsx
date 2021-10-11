@@ -6,7 +6,7 @@ function DisplayItems(props) {
   let allItems = props.currentItem.map((element, index) => {
     return (
       <Link to={`/items/${element.localized_name}`}>
-        <li className={element.id} key={index}>
+        <li className="ind-item" key={index}>
           {element.localized_name} - {element.cost}
           <img src={element.url_image} alt={element.id} />"
         </li>
@@ -15,10 +15,10 @@ function DisplayItems(props) {
   });
 
   return (
-    <>
+    <div className="itemlist">
       <h2>Items here!</h2>
-      <div>{allItems}</div>
-    </>
+      <ul className="ind-list">{allItems}</ul>
+    </div>
   );
 }
 

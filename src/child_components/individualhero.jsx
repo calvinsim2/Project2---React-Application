@@ -48,6 +48,10 @@ function IndividualHero(props) {
 
   //---------------------------------------------- map items ------------------------------------------------------
 
+  // put setState functions here!
+  // if (status === "done") {
+  //     setFunction(
+  //   }
   useEffect(() => {
     // fetch call returns object in objects.
     // use for ... in.. to shift start game, early game, mid game and late game items into different arrays.
@@ -90,13 +94,14 @@ function IndividualHero(props) {
 
       // In Each State, push the corresponding filtered data in it.
       // Then, export it out to child as props.
+      console.log("filter start game state is: ", filterStartGameItems);
 
       setStartGameItem(filterStartGameItems);
       setEarlyGameItem(filterEarlyGameItems);
       setMidGameItem(filterMidGameItems);
       setLateGameItem(filterLateGameItems);
-      // why NO SHOW? need ask justin/mike
-      // console.log("start game state: ", startGameItem);
+      // place in function for it to work.
+      console.log("start game state: ", startGameItem);
     } else {
       console.log("NO ITEM DETECTED!");
     }
