@@ -8,15 +8,53 @@ import HeroLore from "./data_storage/herolore.js";
 import IndividualHero from "./child_components/individualhero.jsx";
 import Home from "./child_components/Home.jsx";
 import { Route, Link, Switch } from "react-router-dom";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
 import "./App.css";
 
 function App() {
-  const [currentHero, setCurrentHero] = useState([]);
+  const [hero, setHero] = useState([]);
+  const [item, setItem] = useState([]);
+  const [status, setStatus] = useState("idle");
+
+  const api = `https://api.opendota.com/api/heroStats`;
 
   useEffect(() => {
-    console.log("Currently, this data is: ", currentHero);
-  }, [currentHero]);
+    const listHero = async () => {
+      setStatus("pending");
+      try {
+        const response = await fetch(api);
+        const resdata = await response.json();
+        setStatus("resolved");
+        console.log("Current Stats: ", status);
+        setHero(resdata);
+        setItem(Items);
+      } catch (error) {
+        setStatus("Error");
+        console.log("No Data Fetched!");
+      }
+    };
+    listHero();
+  }, []);
+  let heroList;
+
+  if (status === "resolved") {
+    console.log("THIS IS: ", hero);
+    console.log("and your ITEMS IS: ", item);
+    heroList = hero.map((element, index) => {
+      return (
+        <Link to={`/hero/${element.localized_name}`}>
+          <div key={index}>
+            <h2>{element.localized_name}</h2>
+            <img src={`https://api.opendota.com${element.img}`} alt="" />
+          </div>
+        </Link>
+      );
+    });
+  } else {
+    console.log("Can't Map!");
+  }
 
   return (
     <>
@@ -45,16 +83,17 @@ function App() {
             <IndividualItem currentItem={Items} />
           </Route>
           <Route exact path="/hero">
-            <Hero setCurrentHero={setCurrentHero} />
+            <Hero heroList={heroList} />
           </Route>
           <Route path="/hero/:heroname/">
             <IndividualHero
-              currentHero={currentHero}
+              currentHero={hero}
               currentItem={Items}
               HeroLore={HeroLore}
             />
           </Route>
         </Switch>
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       </div>
     </>
   );
