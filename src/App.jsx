@@ -6,7 +6,7 @@ import IndividualItem from "./child_components/individualitem.jsx";
 import Hero from "./child_components/hero.jsx";
 import IndividualHero from "./child_components/individualhero.jsx";
 import Home from "./child_components/Home.jsx";
-import HeroTest from "./child_components/herotest.jsx";
+
 import { Route, Link, Switch } from "react-router-dom";
 
 import "./App.css";
@@ -70,8 +70,7 @@ function App() {
             <IndividualItem currentItem={Items} />
           </Route>
           <Route exact path="/hero">
-            {/* <Hero hero={hero} showHero={showHero} status={status} /> */}
-            <HeroTest hero={hero} showHero={showHero} status={status} />
+            <Hero hero={hero} showHero={showHero} status={status} />
           </Route>
           <Route path="/hero/:heroname/">
             <IndividualHero currentHero={hero} currentItem={Items} />
