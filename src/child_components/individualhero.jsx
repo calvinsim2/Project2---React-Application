@@ -21,7 +21,7 @@ function IndividualHero(props) {
   let itemMidGameArray = [];
   let itemLateGameArray = [];
 
-  // obtain selected hero details from the list of heros
+  // obtain selected hero details from the list of heros (app.jsx)
   const filterHero = props.currentHero.filter(
     (element) => element.localized_name === params.heroname
   );
@@ -29,17 +29,20 @@ function IndividualHero(props) {
 
   //--------------------------------- request recommended item from apidota---------------------------------------
 
+  // unique id, --> fetch items
   const apiItems = ` https://api.opendota.com/api/heroes/${filterHero?.[0]?.id}/itemPopularity `;
 
   useEffect(() => {
     const listItems = async () => {
       setItemStatus("pending");
       try {
+        console.log(apiItems);
         const response = await fetch(apiItems);
         const resdata = await response.json();
 
         console.log("Current Stats: ", itemStatus);
         setCurrentItem(resdata);
+        console.log("ITEM STATS: ", resdata);
         setItemStatus("resolved");
       } catch (error) {
         setItemStatus("Item Fetch Error");

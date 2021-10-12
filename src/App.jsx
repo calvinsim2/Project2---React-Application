@@ -6,6 +6,7 @@ import IndividualItem from "./child_components/individualitem.jsx";
 import Hero from "./child_components/hero.jsx";
 import IndividualHero from "./child_components/individualhero.jsx";
 import Home from "./child_components/Home.jsx";
+import HeroTest from "./child_components/herotest.jsx";
 import { Route, Link, Switch } from "react-router-dom";
 
 import "./App.css";
@@ -18,7 +19,9 @@ import "./App.css";
 
 function App() {
   const [hero, setHero] = useState([]);
+  const [showHero, setShowHero] = useState([]);
   const [item, setItem] = useState([]);
+
   const [status, setStatus] = useState("idle");
 
   // fetch initial list of heros API
@@ -41,23 +44,6 @@ function App() {
     };
     listHero();
   }, []);
-  let heroList;
-
-  // map all hero out, push it to hero.jsx.
-  if (status === "resolved") {
-    heroList = hero.map((element, index) => {
-      return (
-        <Link to={`/hero/${element.localized_name}`}>
-          <div className="eachhero" key={index}>
-            <h2>{element.localized_name}</h2>
-            <img src={`https://api.opendota.com${element.img}`} alt="" />
-          </div>
-        </Link>
-      );
-    });
-  } else {
-    console.log("Can't Map!");
-  }
 
   return (
     <>
@@ -84,7 +70,8 @@ function App() {
             <IndividualItem currentItem={Items} />
           </Route>
           <Route exact path="/hero">
-            <Hero heroList={heroList} />
+            {/* <Hero hero={hero} showHero={showHero} status={status} /> */}
+            <HeroTest hero={hero} showHero={showHero} status={status} />
           </Route>
           <Route path="/hero/:heroname/">
             <IndividualHero currentHero={hero} currentItem={Items} />
@@ -96,3 +83,43 @@ function App() {
 }
 
 export default App;
+
+// if (status === "resolved") {
+//   if (all) {
+//     heroList = hero.map((element, index) => {
+//       return (
+//         <Link to={`/hero/${element.localized_name}`}>
+//           <div className="eachhero" key={index}>
+//             <h2>{element.localized_name}</h2>
+//             <img src={`https://api.opendota.com${element.img}`} alt="" />
+//           </div>
+//         </Link>
+//       );
+//     });
+//   }
+//   heroList = hero.map((element, index) => {
+//     return (
+//       <Link to={`/hero/${element.localized_name}`}>
+//         <div className="eachhero" key={index}>
+//           <h2>{element.localized_name}</h2>
+//           <img src={`https://api.opendota.com${element.img}`} alt="" />
+//         </div>
+//       </Link>
+//     );
+//   });
+// } else {
+//   console.log("Can't Map!");
+// }
+
+// map all hero out, push it to hero.jsx.
+// if (status === "resolved") {
+//   heroList = hero.map((element, index) => {
+//     return (
+//       <Link to={`/hero/${element.localized_name}`}>
+//         <div className="eachhero" key={index}>
+//           <h2>{element.localized_name}</h2>
+//           <img src={`https://api.opendota.com${element.img}`} alt="" />
+//         </div>
+//       </Link>
+//     );
+//   });
