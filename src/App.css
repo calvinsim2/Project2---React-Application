@@ -1,5 +1,41 @@
+#root {
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
   text-align: center;
+}
+.nav {
+  background: #ffa07a;
+}
+
+.herohead {
+  background: #fff0f5;
+}
+.overallhero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eachhero:hover {
+  background: lime;
+}
+
+.nav-item {
+  font-size: 25px;
+  color: black;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: lime;
 }
 
 .recommend-item {
@@ -11,9 +47,19 @@
   background: #f4f4f4;
 }
 
+.itemhead {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 .itemlist {
   display: block;
-  background: #444444;
+  margin: 0 0 0 0;
+  background: #b0c4de;
 }
 
 .ind-list {

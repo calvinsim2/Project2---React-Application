@@ -1,11 +1,12 @@
 import React from "react";
+import "../App.css";
 
 function Hero(props) {
   return (
-    <>
-      <h1>Heroes</h1>
-      <div>{props.heroList}</div>
-    </>
+    <div className="herohead">
+      <h2 className="herobody">Heroes</h2>
+      <div className="overallhero">{props.heroList}</div>
+    </div>
   );
 }
 

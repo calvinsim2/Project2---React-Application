@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
+
+//---------------------------- Display ALL items in Items page ----------------------------------------
 
 function DisplayItems(props) {
-  console.log("This is: ", props.currentItem);
+  // obtain items, map all items out for display.
   let allItems = props.currentItem.map((element, index) => {
     return (
       <Link to={`/items/${element.localized_name}`}>
@@ -16,7 +19,7 @@ function DisplayItems(props) {
 
   return (
     <div className="itemlist">
-      <h2>Items here!</h2>
+      <div className="itemhead">Items List</div>
       <ul className="ind-list">{allItems}</ul>
     </div>
   );

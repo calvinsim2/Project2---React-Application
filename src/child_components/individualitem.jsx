@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+//---------- Single Item page, displays all the information regarding the item --------------------------
+
 function IndividualItem(props) {
   const itemParam = useParams();
   const [secret, setSecret] = useState("No");

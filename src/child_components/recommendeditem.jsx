@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
+
+//------------- map hero's recommended item, and provide routing to the selected item.
 
 function RecommendedItem(props) {
   // map out start item
@@ -13,7 +16,7 @@ function RecommendedItem(props) {
       </Link>
     );
   });
-
+  // map out early game items
   const early = props.filterEarly.map((element, index) => {
     return (
       <Link to={`/items/${element.localized_name}/`}>
@@ -24,7 +27,7 @@ function RecommendedItem(props) {
       </Link>
     );
   });
-
+  // map out middle game items
   const middle = props.filterMid.map((element, index) => {
     return (
       <Link to={`/items/${element.localized_name}/`}>
@@ -35,7 +38,7 @@ function RecommendedItem(props) {
       </Link>
     );
   });
-
+  // map out late game items
   const late = props.filterLate.map((element, index) => {
     return (
       <Link to={`/items/${element.localized_name}/`}>

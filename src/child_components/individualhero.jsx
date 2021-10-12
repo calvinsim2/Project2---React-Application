@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import IndividualHeroStats from "./individualherostats.jsx";
 import RecommendedItem from "./recommendeditem.jsx";
+import "../App.css";
+
+//-------------------------- Display information for single selected hero. -----------------------------------------
 
 function IndividualHero(props) {
   const [currentItem, setCurrentItem] = useState("");
   const [itemStatus, setItemStatus] = useState("Idle");
-  const [currentLore, setCurrentLore] = useState(props.HeroLore);
   const [startGameItem, setStartGameItem] = useState([]);
   const [earlyGameItem, setEarlyGameItem] = useState([]);
   const [midGameItem, setMidGameItem] = useState([]);
@@ -19,6 +21,7 @@ function IndividualHero(props) {
   let itemMidGameArray = [];
   let itemLateGameArray = [];
 
+  // obtain selected hero details from the list of heros
   const filterHero = props.currentHero.filter(
     (element) => element.localized_name === params.heroname
   );
@@ -100,8 +103,8 @@ function IndividualHero(props) {
       setEarlyGameItem(filterEarlyGameItems);
       setMidGameItem(filterMidGameItems);
       setLateGameItem(filterLateGameItems);
-      // place in function for it to work.
-      console.log("start game state: ", startGameItem);
+
+      // console.log("start game state: ", startGameItem);
     } else {
       console.log("NO ITEM DETECTED!");
     }
@@ -109,7 +112,7 @@ function IndividualHero(props) {
 
   return (
     <>
-      <IndividualHeroStats filterHero={filterHero} currentLore={currentLore} />
+      <IndividualHeroStats filterHero={filterHero} />
       <RecommendedItem
         filterStart={startGameItem}
         filterEarly={earlyGameItem}
