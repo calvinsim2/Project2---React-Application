@@ -169,6 +169,17 @@ const items = [
     id: 182,
   },
   {
+    localized_name: "Recipe: Moon Shard",
+    name: "item_recipe_moon_shard",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_moon_shard_lg.png",
+    id: 246,
+  },
+  {
     localized_name: "Moon Shard",
     name: "item_moon_shard",
     recipe: 0,
@@ -511,6 +522,17 @@ const items = [
     id: 43,
   },
   {
+    localized_name: "Recipe: Observer and Sentry Wards",
+    name: "item_recipe_ward_dispenser",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_ward_dispenser_lg.png",
+    id: 217,
+  },
+  {
     localized_name: "Observer and Sentry Wards",
     name: "item_ward_dispenser",
     recipe: 0,
@@ -572,6 +594,17 @@ const items = [
     url_image:
       "http://cdn.dota2.com/apps/dota2/images/items/recipe_travel_boots_lg.png",
     id: 47,
+  },
+  {
+    localized_name: "Recipe: Boots of Travel",
+    name: "item_recipe_travel_boots_2",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_travel_boots_2_lg.png",
+    id: 219,
   },
   {
     localized_name: "Boots of Travel",
@@ -1098,6 +1131,17 @@ const items = [
     id: 98,
   },
   {
+    localized_name: "Recipe: Bloodthorn",
+    name: "item_recipe_bloodthorn",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 1000,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_bloodthorn_lg.png",
+    id: 245,
+  },
+  {
     localized_name: "Bloodthorn",
     name: "item_bloodthorn",
     recipe: 0,
@@ -1106,6 +1150,17 @@ const items = [
     side_shop: 0,
     url_image: "http://cdn.dota2.com/apps/dota2/images/items/bloodthorn_lg.png",
     id: 250,
+  },
+  {
+    localized_name: "Recipe: Echo Sabre",
+    name: "item_recipe_echo_sabre",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_echo_sabre_lg.png",
+    id: 251,
   },
   {
     localized_name: "Echo Sabre",
@@ -1139,6 +1194,17 @@ const items = [
     id: 100,
   },
   {
+    localized_name: "Recipe: Aether Lens",
+    name: "item_recipe_aether_lens",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 600,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_aether_lens_lg.png",
+    id: 233,
+  },
+  {
     localized_name: "Aether Lens",
     name: "item_aether_lens",
     recipe: 0,
@@ -1170,6 +1236,17 @@ const items = [
     url_image:
       "http://cdn.dota2.com/apps/dota2/images/items/force_staff_lg.png",
     id: 102,
+  },
+  {
+    localized_name: "Recipe: Hurricane Pike",
+    name: "item_recipe_hurricane_pike",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_hurricane_pike_lg.png",
+    id: 262,
   },
   {
     localized_name: "Hurricane Pike",
@@ -1534,7 +1611,17 @@ const items = [
     url_image: "http://cdn.dota2.com/apps/dota2/images/items/sphere_lg.png",
     id: 123,
   },
-
+  {
+    localized_name: "Recipe: Lotus Orb",
+    name: "item_recipe_lotus_orb",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_lotus_orb_lg.png",
+    id: 221,
+  },
   {
     localized_name: "Lotus Orb",
     name: "item_lotus_orb",
@@ -1545,7 +1632,17 @@ const items = [
     url_image: "http://cdn.dota2.com/apps/dota2/images/items/lotus_orb_lg.png",
     id: 226,
   },
-
+  {
+    localized_name: "Recipe: Meteor Hammer",
+    name: "item_recipe_meteor_hammer",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_meteor_hammer_lg.png",
+    id: 222,
+  },
   {
     localized_name: "Meteor Hammer",
     name: "item_meteor_hammer",
@@ -1557,7 +1654,17 @@ const items = [
       "http://cdn.dota2.com/apps/dota2/images/items/meteor_hammer_lg.png",
     id: 223,
   },
-
+  {
+    localized_name: "Recipe: Nullifier",
+    name: "item_recipe_nullifier",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_nullifier_lg.png",
+    id: 224,
+  },
   {
     localized_name: "Nullifier",
     name: "item_nullifier",
@@ -1568,7 +1675,17 @@ const items = [
     url_image: "http://cdn.dota2.com/apps/dota2/images/items/nullifier_lg.png",
     id: 225,
   },
-
+  {
+    localized_name: "Recipe: Aeon Disk",
+    name: "item_recipe_combo_breaker",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 1675,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_combo_breaker_lg.png",
+    id: 255,
+  },
   {
     localized_name: "Aeon Disk",
     name: "item_combo_breaker",
@@ -1580,7 +1697,17 @@ const items = [
       "http://cdn.dota2.com/apps/dota2/images/items/combo_breaker_lg.png",
     id: 256,
   },
-
+  {
+    localized_name: "Recipe: Kaya",
+    name: "item_recipe_trident",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 500,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_trident_lg.png",
+    id: 258,
+  },
   {
     localized_name: "Kaya",
     name: "item_trident",
@@ -1602,7 +1729,17 @@ const items = [
       "http://cdn.dota2.com/apps/dota2/images/items/refresher_shard_lg.png",
     id: 260,
   },
-
+  {
+    localized_name: "Recipe: Spirit Vessel",
+    name: "item_recipe_spirit_vessel",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 600,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_spirit_vessel_lg.png",
+    id: 266,
+  },
   {
     localized_name: "Spirit Vessel",
     name: "item_spirit_vessel",
@@ -1634,6 +1771,17 @@ const items = [
     side_shop: 0,
     url_image: "http://cdn.dota2.com/apps/dota2/images/items/vanguard_lg.png",
     id: 125,
+  },
+  {
+    localized_name: "Recipe: Crimson Guard",
+    name: "item_recipe_crimson_guard",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 600,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_crimson_guard_lg.png",
+    id: 243,
   },
   {
     localized_name: "Crimson Guard",
@@ -1904,6 +2052,17 @@ const items = [
     id: 149,
   },
   {
+    localized_name: "Recipe: Dragon Lance",
+    name: "item_recipe_dragon_lance",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_dragon_lance_lg.png",
+    id: 234,
+  },
+  {
     localized_name: "Dragon Lance",
     name: "item_dragon_lance",
     recipe: 0,
@@ -1956,6 +2115,17 @@ const items = [
     url_image:
       "http://cdn.dota2.com/apps/dota2/images/items/invis_sword_lg.png",
     id: 152,
+  },
+  {
+    localized_name: "Recipe: Silver Edge",
+    name: "item_recipe_silver_edge",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 700,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_silver_edge_lg.png",
+    id: 248,
   },
   {
     localized_name: "Silver Edge",
@@ -2269,6 +2439,17 @@ const items = [
     id: 180,
   },
   {
+    localized_name: "Recipe: Octarine Core",
+    name: "item_recipe_octarine_core",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_octarine_core_lg.png",
+    id: 228,
+  },
+  {
     localized_name: "Octarine Core",
     name: "item_octarine_core",
     recipe: 0,
@@ -2345,7 +2526,17 @@ const items = [
       "http://cdn.dota2.com/apps/dota2/images/items/medallion_of_courage_lg.png",
     id: 187,
   },
-
+  {
+    localized_name: "Recipe: Solar Crest",
+    name: "item_recipe_solar_crest",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_solar_crest_lg.png",
+    id: 227,
+  },
   {
     localized_name: "Solar Crest",
     name: "item_solar_crest",
@@ -2390,7 +2581,28 @@ const items = [
       "http://cdn.dota2.com/apps/dota2/images/items/recipe_veil_of_discord_lg.png",
     id: 189,
   },
-
+  {
+    localized_name: "Veil of Discord",
+    name: "item_veil_of_discord",
+    recipe: 0,
+    secret_shop: 0,
+    cost: 2330,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/veil_of_discord_lg.png",
+    id: 190,
+  },
+  {
+    localized_name: "Recipe: Guardian Greaves",
+    name: "item_recipe_guardian_greaves",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 1700,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_guardian_greaves_lg.png",
+    id: 230,
+  },
   {
     localized_name: "Guardian Greaves",
     name: "item_guardian_greaves",
@@ -2423,6 +2635,17 @@ const items = [
     url_image:
       "http://cdn.dota2.com/apps/dota2/images/items/rod_of_atos_lg.png",
     id: 206,
+  },
+  {
+    localized_name: "Iron Talon Recipe",
+    name: "item_recipe_iron_talon",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_iron_talon_lg.png",
+    id: 238,
   },
   {
     localized_name: "Iron Talon",
@@ -2532,6 +2755,17 @@ const items = [
     url_image:
       "http://cdn.dota2.com/apps/dota2/images/items/shadow_amulet_lg.png",
     id: 215,
+  },
+  {
+    localized_name: "Recipe: Glimmer Cape",
+    name: "item_recipe_glimmer_cape",
+    recipe: 1,
+    secret_shop: 0,
+    cost: 0,
+    side_shop: 0,
+    url_image:
+      "http://cdn.dota2.com/apps/dota2/images/items/recipe_glimmer_cape_lg.png",
+    id: 253,
   },
   {
     localized_name: "Glimmer Cape",

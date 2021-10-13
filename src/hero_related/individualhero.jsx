@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import IndividualHeroStats from "./individualherostats.jsx";
-import RecommendedItem from "./recommendeditem.jsx";
+import RecommendedItem from "../items_related/recommendeditem.jsx";
 import "../App.css";
 
 //-------------------------- Display information for single selected hero. -----------------------------------------

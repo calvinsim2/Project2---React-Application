@@ -19,22 +19,20 @@ function IndividualHeroStats(props) {
           alt=""
         />
       </div>
-      <div>
+      <div className="herogeneral">
         <img
           src={`https://api.opendota.com${props.filterHero?.[0]?.icon}`}
           alt=""
         />
-        <h2>{props.filterHero?.[0]?.localized_name}</h2>
+        <p className="heroname">{props.filterHero?.[0]?.localized_name}</p>
         {/* <p>{lore}</p> */}
         <p>[ {currentRole} ]</p>
       </div>
-      <div>
+      <div className="herodes">
         <p>Attack Type: {props.filterHero?.[0]?.attack_type}</p>
         <p>Attack Range: {props.filterHero?.[0]?.attack_range}</p>
         <p>Attack Rate: {props.filterHero?.[0]?.attack_rate}</p>
         <p>Movement Speed: {props.filterHero?.[0]?.move_speed}</p>
-      </div>
-      <div>
         <p>Primary Attribute: {props.filterHero?.[0]?.primary_attr}</p>
         <p>Base Str: {props.filterHero?.[0]?.base_str}</p>
         <p>Base Agi: {props.filterHero?.[0]?.base_agi}</p>

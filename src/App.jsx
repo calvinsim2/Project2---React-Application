@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import DisplayItems from "./child_components/items.jsx";
+import DisplayItems from "./items_related/items.jsx";
 import Items from "./data_storage/items.js";
-import IndividualItem from "./child_components/individualitem.jsx";
-import Hero from "./child_components/hero.jsx";
-import IndividualHero from "./child_components/individualhero.jsx";
-import Home from "./child_components/Home.jsx";
+import IndividualItem from "./items_related/individualitem.jsx";
+import Hero from "./hero_related/hero.jsx";
+import IndividualHero from "./hero_related/individualhero.jsx";
+import Home from "./Home.jsx";
 
 import { Route, Link, Switch } from "react-router-dom";
 
@@ -19,7 +19,6 @@ import "./App.css";
 
 function App() {
   const [hero, setHero] = useState([]);
-  const [showHero, setShowHero] = useState([]);
   const [item, setItem] = useState([]);
 
   const [status, setStatus] = useState("idle");
@@ -61,7 +60,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home currentItem={Items} currentHero={hero} />
           </Route>
           <Route exact path="/items">
             <DisplayItems currentItem={Items} />
@@ -70,7 +69,7 @@ function App() {
             <IndividualItem currentItem={Items} />
           </Route>
           <Route exact path="/hero">
-            <Hero hero={hero} showHero={showHero} status={status} />
+            <Hero hero={hero} />
           </Route>
           <Route path="/hero/:heroname/">
             <IndividualHero currentHero={hero} currentItem={Items} />
@@ -122,3 +121,4 @@ export default App;
 //       </Link>
 //     );
 //   });
+// showHero={showHero}

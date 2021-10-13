@@ -3,7 +3,7 @@ import "../App.css";
 import Checkbox from "@mui/material/Checkbox";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
 import { Link } from "react-router-dom";
 
 function HeroTest(props) {
@@ -15,9 +15,12 @@ function HeroTest(props) {
   const [chooseMelee, setChooseMelee] = useState(false);
   const [chooseRange, setChooseRange] = useState(false);
 
+  const style = {
+    margin: 10,
+  };
+
   let heroList;
   let heroFilter;
-  console.log(props.status);
 
   // ---------------------Function to filter hero depending on attribute and attack type-------------------------------------
   const filterHero = function (stats) {
@@ -90,12 +93,27 @@ function HeroTest(props) {
     chooseRange,
   }).map((element, index) => {
     return (
-      <Link to={`/hero/${element.localized_name}`}>
-        <div className="eachhero" key={index}>
-          <h2>{element.localized_name}</h2>
-          <img src={`https://api.opendota.com${element.img}`} alt="" />
-        </div>
-      </Link>
+      <Tooltip
+        title={`${element.localized_name}`}
+        followCursor="true"
+        sx={{ ...style }}
+      >
+        <Link to={`/hero/${element.localized_name}`}>
+          <div
+            style={{
+              backgroundImage: `url(https://api.opendota.com${element.img})`,
+
+              backgroundSize: "cover",
+              width: 256,
+              height: 144,
+              borderRadius: 15,
+              margin: 20,
+            }}
+            className="hero"
+            key={index}
+          ></div>
+        </Link>
+      </Tooltip>
     );
   });
 
