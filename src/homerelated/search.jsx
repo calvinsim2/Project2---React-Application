@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
-import "./App.css";
+import "../App.css";
 
 function SearchBackup(props) {
   //---------------------- Depending on keyboard input, matched alphabets with hero's name will show!----------------
@@ -13,11 +13,9 @@ function SearchBackup(props) {
     }
   });
 
-  console.log("check filterhero: ", searchHero);
-
   const showHero = searchHero.map((element, index) => {
     return (
-      <Tooltip title={`${element.localized_name}`} followCursor="true">
+      <Tooltip title={`${element.localized_name}`} followCursor={true}>
         <Link to={`/hero/${element.localized_name}`}>
           <div
             style={{

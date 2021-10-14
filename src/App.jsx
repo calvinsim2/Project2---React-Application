@@ -5,7 +5,7 @@ import Items from "./data_storage/items.js";
 import IndividualItem from "./items_related/individualitem.jsx";
 import Hero from "./hero_related/hero.jsx";
 import IndividualHero from "./hero_related/individualhero.jsx";
-import Home from "./Home.jsx";
+import Home from "./homerelated/Home.jsx";
 
 import { Route, Link, Switch } from "react-router-dom";
 
@@ -60,19 +60,19 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <Home currentItem={Items} currentHero={hero} />
+            <Home currentHero={hero} status={status} />
           </Route>
           <Route exact path="/items">
-            <DisplayItems currentItem={Items} />
+            <DisplayItems currentItem={item} />
           </Route>
           <Route path="/items/:name/">
-            <IndividualItem currentItem={Items} />
+            <IndividualItem currentItem={item} />
           </Route>
           <Route exact path="/hero">
             <Hero hero={hero} />
           </Route>
           <Route path="/hero/:heroname/">
-            <IndividualHero currentHero={hero} currentItem={Items} />
+            <IndividualHero currentHero={hero} currentItem={item} />
           </Route>
         </Switch>
       </div>

@@ -11,7 +11,7 @@ function DisplayItems(props) {
     return (
       <Tooltip
         title={`${element.localized_name} - ${element.cost}`}
-        followCursor="true"
+        followCursor={true}
       >
         <Link to={`/items/${element.localized_name}`}>
           <li

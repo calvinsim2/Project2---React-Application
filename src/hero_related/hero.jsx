@@ -95,7 +95,7 @@ function HeroTest(props) {
     return (
       <Tooltip
         title={`${element.localized_name}`}
-        followCursor="true"
+        followCursor={true}
         sx={{ ...style }}
       >
         <Link to={`/hero/${element.localized_name}`}>

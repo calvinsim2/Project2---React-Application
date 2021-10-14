@@ -17,7 +17,7 @@ function RecommendedItem(props) {
   // map out start item
   const start = props.filterStart.map((element, index) => {
     return (
-      <Tooltip title={`${element.localized_name} `} followCursor="true">
+      <Tooltip title={`${element.localized_name} `} followCursor={true}>
         <Link to={`/items/${element.localized_name}/`}>
           <div
             style={{ ...style, backgroundImage: `url(${element.url_image})` }}
@@ -31,7 +31,7 @@ function RecommendedItem(props) {
   // map out early game items
   const early = props.filterEarly.map((element, index) => {
     return (
-      <Tooltip title={`${element.localized_name} `} followCursor="true">
+      <Tooltip title={`${element.localized_name} `} followCursor={true}>
         <Link to={`/items/${element.localized_name}/`}>
           <div
             style={{ ...style, backgroundImage: `url(${element.url_image})` }}
@@ -45,7 +45,7 @@ function RecommendedItem(props) {
   // map out middle game items
   const middle = props.filterMid.map((element, index) => {
     return (
-      <Tooltip title={`${element.localized_name} `} followCursor="true">
+      <Tooltip title={`${element.localized_name} `} followCursor={true}>
         <Link to={`/items/${element.localized_name}/`}>
           <div
             style={{ ...style, backgroundImage: `url(${element.url_image})` }}
@@ -59,7 +59,7 @@ function RecommendedItem(props) {
   // map out late game items
   const late = props.filterLate.map((element, index) => {
     return (
-      <Tooltip title={`${element.localized_name} `} followCursor="true">
+      <Tooltip title={`${element.localized_name} `} followCursor={true}>
         <Link to={`/items/${element.localized_name}/`}>
           <div
             style={{ ...style, backgroundImage: `url(${element.url_image})` }}
