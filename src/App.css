@@ -109,6 +109,7 @@
   font-style: italic;
   border-radius: 15px;
   font-weight: bold;
+  padding: 10px;
 }
 
 .heroname {
@@ -130,6 +131,7 @@
   margin-right: auto;
   margin-top: 0px;
   border-radius: 15px;
+  padding: 10px;
 }
 .itemhead {
   font-size: 20px;
@@ -158,6 +160,7 @@
 
 .itemspec {
   font-size: 20px;
+  font-weight: bold;
   background: lightgray;
   background: -webkit-radial-gradient(
     center,

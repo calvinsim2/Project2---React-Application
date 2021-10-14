@@ -7,7 +7,7 @@ import "../App.css";
 
 //-------------------------- Display information for single selected hero. -----------------------------------------
 
-function IndividualHero(props) {
+function HeroDetails(props) {
   const [currentItem, setCurrentItem] = useState("");
   const [itemStatus, setItemStatus] = useState("Idle");
   const [startGameItem, setStartGameItem] = useState([]);
@@ -134,7 +134,7 @@ function IndividualHero(props) {
   );
 }
 
-export default IndividualHero;
+export default HeroDetails;
 
 // useEffect(() => {
 //   // fetch call returns object in objects.

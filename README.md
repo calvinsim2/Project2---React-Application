@@ -2,14 +2,14 @@
 
 # Project Idea
 
-Inspired by playdota.com, This project provides a list of Dota2 Heroes, general hero stats, items description.
+Inspired by DotA2 Fandom, this project provides a list of Dota2 Heroes, general hero stats, items description.
 Users are able to narrow down their desired choices of heros to pick using this
 app.
 
 # Technical Used
 
 React.jS
-Bootstrap (to be confirmed)
+MUI
 
 # API used
 
@@ -19,11 +19,14 @@ https://docs.opendota.com/#
 
 Basically, user will be able to:
 
-- An navigation page to have an overview of heroes
-- An navigation page to have an overview of items
-- An option to narrow down their search
+- A navigation page to have an overview of heroes
+- A navigation page to have an overview of items
+- An option to narrow down their search (based on hero attribute and attack type)
 - On each heroes, user are able to click into it to view their stats
+- In the individual hero stats, users are able to see the recommended items for each stage of the game.
 
 # HFM
 
-- In the homepage, user will be able to randomize a hero, and shown to them
+- At the homepage, a randomized hero is shown to the user, and it will be randomized again
+  when user navigates off the page.
+- At the homepage, users are able to search for HEROES in the textbox

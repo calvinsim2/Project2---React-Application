@@ -3,8 +3,9 @@ import React from "react";
 import DisplayItems from "./items_related/items.jsx";
 import Items from "./data_storage/items.js";
 import IndividualItem from "./items_related/individualitem.jsx";
+import FilterItem from "./items_related/filteritem.jsx";
 import Hero from "./hero_related/hero.jsx";
-import IndividualHero from "./hero_related/individualhero.jsx";
+import HeroDetails from "./hero_related/herodetails.jsx";
 import Home from "./homerelated/Home.jsx";
 
 import { Route, Link, Switch } from "react-router-dom";
@@ -23,6 +24,12 @@ function App() {
   const [item, setItem] = useState([]);
 
   const [status, setStatus] = useState("idle");
+  // states for lifting states and prop passing for Individual ITEMS.
+  const [itemImg, setItemImg] = useState("");
+  const [itemSecret, setItemSecret] = useState("");
+  const [itemSide, setItemSide] = useState("");
+  const [itemCost, setItemCost] = useState(0);
+  const [itemName, setItemName] = useState("");
 
   // fetch initial list of heros API
   const api = `https://api.opendota.com/api/heroStats`;
@@ -67,15 +74,27 @@ function App() {
             <DisplayItems currentItem={item} />
           </Route>
           <Route path="/items/:name/">
-            {/* filter before passing in */}
-            {/* higher order components */}
-            <IndividualItem currentItem={item} />
+            <FilterItem
+              listOfItems={item}
+              setItemImg={setItemImg}
+              setItemSecret={setItemSecret}
+              setItemSide={setItemSide}
+              setItemCost={setItemCost}
+              setItemName={setItemName}
+            />
+            <IndividualItem
+              itemImg={itemImg}
+              itemSecret={itemSecret}
+              itemSide={itemSide}
+              itemCost={itemCost}
+              itemName={itemName}
+            />
           </Route>
           <Route exact path="/hero">
             <Hero hero={hero} />
           </Route>
           <Route path="/hero/:heroname/">
-            <IndividualHero currentHero={hero} currentItem={item} />
+            <HeroDetails currentHero={hero} currentItem={item} />
           </Route>
         </Switch>
       </div>
@@ -84,44 +103,3 @@ function App() {
 }
 
 export default App;
-
-// if (status === "resolved") {
-//   if (all) {
-//     heroList = hero.map((element, index) => {
-//       return (
-//         <Link to={`/hero/${element.localized_name}`}>
-//           <div className="eachhero" key={index}>
-//             <h2>{element.localized_name}</h2>
-//             <img src={`https://api.opendota.com${element.img}`} alt="" />
-//           </div>
-//         </Link>
-//       );
-//     });
-//   }
-//   heroList = hero.map((element, index) => {
-//     return (
-//       <Link to={`/hero/${element.localized_name}`}>
-//         <div className="eachhero" key={index}>
-//           <h2>{element.localized_name}</h2>
-//           <img src={`https://api.opendota.com${element.img}`} alt="" />
-//         </div>
-//       </Link>
-//     );
-//   });
-// } else {
-//   console.log("Can't Map!");
-// }
-
-// map all hero out, push it to hero.jsx.
-// if (status === "resolved") {
-//   heroList = hero.map((element, index) => {
-//     return (
-//       <Link to={`/hero/${element.localized_name}`}>
-//         <div className="eachhero" key={index}>
-//           <h2>{element.localized_name}</h2>
-//           <img src={`https://api.opendota.com${element.img}`} alt="" />
-//         </div>
-//       </Link>
-//     );
-//   });
-// showHero={showHero}
