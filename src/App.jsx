@@ -12,6 +12,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 
 // App.jsx ---> fetch API for hero details & obtain item details
+// Home.jsx ===> user's input in textbox to search for desired hero, randomized hero of the day shown.
 // Display overall hero and item list (hero.jsx / items.jsx)
 // Single hero details (individualhero.jsx -----> individualherostats.jsx)
 // Single hero recommended items display -----> recommendeditem.jsx

@@ -97,10 +97,16 @@
 
 .herogeneral {
   background: lightgray;
+  background: -webkit-radial-gradient(
+    center,
+    rgba(255, 215, 0, 0.4),
+    rgba(255, 215, 0, 1)
+  );
   width: 500px;
   margin-left: auto;
   margin-right: auto;
   font-size: 25px;
+  font-style: italic;
   border-radius: 15px;
   font-weight: bold;
 }
@@ -112,7 +118,13 @@
 
 .herodes {
   font-size: 20px;
+  font-weight: bold;
   background: lightgray;
+  background: -webkit-radial-gradient(
+    center,
+    rgba(144, 238, 144, 0.4),
+    rgba(144, 238, 144, 1)
+  );
   width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -147,6 +159,11 @@
 .itemspec {
   font-size: 20px;
   background: lightgray;
+  background: -webkit-radial-gradient(
+    center,
+    rgba(30, 144, 255, 0.4),
+    rgba(30, 144, 255, 1)
+  );
   width: 500px;
   margin-left: auto;
   margin-right: auto;
