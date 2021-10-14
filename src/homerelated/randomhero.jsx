@@ -8,6 +8,7 @@ function RandomHero(props) {
   const wordStyle = {
     color: "success.main",
     fontSize: 20,
+    fontWeight: "bold",
   };
 
   // obtain data for that randomized hero
@@ -41,7 +42,7 @@ function RandomHero(props) {
   return (
     <div className="randomhero">
       <Typography variant="p" sx={{ ...wordStyle }}>
-        Hero of the day!
+        Check out THIS HERO!
       </Typography>
       <div>{randHero}</div>
     </div>

@@ -67,6 +67,8 @@ function App() {
             <DisplayItems currentItem={item} />
           </Route>
           <Route path="/items/:name/">
+            {/* filter before passing in */}
+            {/* higher order components */}
             <IndividualItem currentItem={item} />
           </Route>
           <Route exact path="/hero">

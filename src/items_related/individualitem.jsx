@@ -11,7 +11,7 @@ function IndividualItem(props) {
   const filterItem = props.currentItem.filter(
     (element) => element.localized_name === itemParam.name
   );
-  console.log("Filtered Array Item NAME  is: ", filterItem);
+  // put in parent component -->
 
   useEffect(() => {
     const findSecret = filterItem?.[0]?.secret_shop === 0 ? "No" : "Yes";
@@ -21,13 +21,15 @@ function IndividualItem(props) {
   });
 
   return (
-    <div className="itemspec">
-      <img src={filterItem?.[0]?.url_image} />
+    <div>
+      <div className="itemspec">
+        <img src={filterItem?.[0]?.url_image} />
 
-      <h3>{filterItem?.[0]?.localized_name}</h3>
-      <p>Total Gold to build: {filterItem?.[0]?.cost}</p>
-      <p>Found in Secret Shop: {secret}</p>
-      <p>Found in Side Shop: {side}</p>
+        <h3>{filterItem?.[0]?.localized_name}</h3>
+        <p>Total Gold to build: {filterItem?.[0]?.cost}</p>
+        <p>Found in Secret Shop: {secret}</p>
+        <p>Found in Side Shop: {side}</p>
+      </div>
     </div>
   );
 }

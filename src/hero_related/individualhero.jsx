@@ -32,10 +32,14 @@ function IndividualHero(props) {
     (element) => element.localized_name === params.heroname
   );
 
+  const filterHeroId = filterHero[0].id;
+  console.log("THIS IS MY ID", filterHeroId);
+
   //--------------------------------- request recommended item from apidota---------------------------------------
 
   // unique id, --> fetch items
-  const apiItems = ` https://api.opendota.com/api/heroes/${filterHero?.[0]?.id}/itemPopularity `;
+  // const apiItems = ` https://api.opendota.com/api/heroes/${filterHero?.[0]?.id}/itemPopularity `;
+  const apiItems = ` https://api.opendota.com/api/heroes/${filterHeroId}/itemPopularity `;
 
   useEffect(() => {
     const listItems = async () => {
@@ -81,17 +85,17 @@ function IndividualHero(props) {
 
   useEffect(() => {
     if (itemStatus === "resolved") {
-      // segregate different groups of items into different arrays respectively!
+      // segregate different groups of items, which is given by API in ID, into different arrays!
       itemStartGameArray = sortDatatoArray(currentItem.start_game_items);
       itemEarlyGameArray = sortDatatoArray(currentItem.early_game_items);
       itemMidGameArray = sortDatatoArray(currentItem.mid_game_items);
       itemLateGameArray = sortDatatoArray(currentItem.late_game_items);
 
+      // filter each exact item into a new array, which contains their exact data instead of ID.
       filterStartGameItems = filterItemsFromOverallArray(
         itemStartGameArray,
         props.currentItem
       );
-
       filterEarlyGameItems = filterItemsFromOverallArray(
         itemEarlyGameArray,
         props.currentItem
