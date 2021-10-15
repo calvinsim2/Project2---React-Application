@@ -15,6 +15,7 @@ function Home(props) {
     setTextInput(event.target.value);
   };
 
+  // obtain number, to select the random hero.
   const getNumber = function () {
     let num = Math.trunc(Math.random() * 114 + 1);
     if (num === 24) {
