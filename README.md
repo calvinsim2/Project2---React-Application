@@ -2,7 +2,7 @@
 
 # Project Idea
 
-Inspired by DotA2 Fandom, this project provides a list of Dota2 Heroes, general hero stats, items description.
+Inspired by the famous MOBA game DotA2, this project provides a list of Dota2 Heroes, general hero stats, items description.
 Users are able to narrow down their desired choices of heros to pick using this
 app.
 
